@@ -1,0 +1,22 @@
+[project]
+name = "fmsae-repro"
+version = "0.1.0"
+description = "Scripts and notebooks reproducing the analyses in Zhao et al. (2026), FM-SAE"
+authors = [{ name = "Ziyuan Zhao", email = "ziyuanzhao@fas.harvard.edu" }]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "mesoslide",
+    "ezslide",
+    "pandas",
+    "joblib",
+]
+
+# TODO: replace with git tags once mesoslide 0.11.0 and ezslide are published.
+[tool.uv.sources]
+mesoslide = { path = "../../../../meson", editable = true }
+ezslide = { path = "../../../../ezslide", editable = true }
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
