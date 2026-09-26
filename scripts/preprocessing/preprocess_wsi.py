@@ -15,7 +15,7 @@ def main():
     lsp_id = os.path.basename(file_path).split('.')[0]
     print(f'Processing {lsp_id} from {file_path}')
 
-    wsi = ezslide.open_wsi(file_path,
+    wsi = ezslide.open_slide(file_path,
                            attach_images=True,
                            reader="tifffile_zarr")
     zs.pp.find_tissues(wsi,
